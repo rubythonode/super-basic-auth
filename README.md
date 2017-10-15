@@ -60,7 +60,7 @@ Finally, apply the middleware to any route you want protected by that username a
 password combination:
 
 ```php
-Route::group('admin', function () {
+Route::group(['prefix' => 'admin'], function () {
     // Your password protected routes.
 })->middleware(\Sven\SuperBasicAuth\SuperBasicAuth::class);
 ```
